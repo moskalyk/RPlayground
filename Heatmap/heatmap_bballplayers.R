@@ -1,5 +1,5 @@
 #reading in data from file, make sure to change this file path
-nba <-read.csv("/Users/Moskalyk/RPlayground/ppg2008.csv", sep=",")
+nba <-read.csv("/Users/Moskalyk/RPlayground/Heatmap/ppg2008.csv", sep=",")
 
 #reordering the data by points (least to greatest)
 nba <- nba[order(nba$PTS),]
@@ -14,6 +14,7 @@ nba <- nba[,2:20]
 nba_matrix <- data.matrix(nba)
 
 #create heatmap
-nba_heatmap <- heatmap(nba_matrix, Rowv=NA, Colv=NA, scale="column", margins=c(1,1))
+nba_heatmap <- heatmap(nba_matrix, Rowv=NA, Colv=NA, scale="column", margins=c(4,1))
 
+#title(main="main title", pos=1)
 
